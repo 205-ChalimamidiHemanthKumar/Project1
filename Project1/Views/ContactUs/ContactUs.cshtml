@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<ul>
+    @foreach (var con in ViewData["contactUss"] as IList<ContactUs>)
+            {
+               
+              <li>
+                  <h2>Contact Details of PhoneNumber:</h2>
+                  <form>
+                      <label for="PhoneNumber">PhoneNumber:</label><br />
+                      <input type="text" id="PhoneNumber" name="PhoneNumber" value="6305050027"><br />
+                  </form>
+                  @con.PhoneNumber
+              </li>
+              <li>
+                  <h2>Contact Details of EmailAddress:</h2>
+                  <form>
+                      <label for="Email">Email:</label><br />
+                      <input type="text" id="Email" name="Email" value="imhemanth5@gmail.com"><br />
+                  </form>
+                  @con.Email
+              </li>
+     }
+</ul>
+
+<button onclick="ContactUs()">ContactUs</button>
+<p id="result"></p>
